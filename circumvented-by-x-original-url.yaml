@@ -1,0 +1,18 @@
+id: circumvented-by-x-original-url
+
+info:
+  name: Circumvented-By-X-Original-Url
+  author: laomo
+  severity: high
+
+requests:
+  - method: GET
+    headers:
+      X-Original-URL: "/0021e78f48fe6525798294b7711c6f72"
+    path:
+      - "{{BaseURL}}/"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 404
