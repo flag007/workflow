@@ -5,11 +5,11 @@ info:
   author: laomo
 
 variables:
-  alive-domain: workflow/alive-domain.yaml
+  alivedomain: workflow/alive-domain.yaml
   circumvented: workflow/circumvented-by-x-original-url.yaml
 
 logic:
   |
-  if alive-domain() {
+  if alivedomain() {
     circumvented()
   }
