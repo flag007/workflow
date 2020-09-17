@@ -1,0 +1,15 @@
+id: alive domain
+info:
+  name: Alive Domain
+  author: laomo
+  severity: medium
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
